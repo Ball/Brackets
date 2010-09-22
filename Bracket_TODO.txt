@@ -1,0 +1,24 @@
+New Tournament
+  Place Teams
+  Set time for turn off for bracket edits
+  Set time for publication of brackets
+  Open Tournament
+  Set scoring strategy
+Update Standings
+  Advance Winning Team
+  Update Bracket Scores
+Create Pool
+  Create Pool
+  Send Email with Invite link
+Maintain Brackets
+  Manage Payment
+  Kickout of bracket
+Create Bracket
+  Associate user with pool
+  fill in teams
+  Edit Bracket
+  Change Teams
+View Pool
+  Compare Standing
+  View Bracket
+  Compare Brackets
