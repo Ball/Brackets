@@ -5,3 +5,11 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 Brackets::Application.load_tasks
+
+MONGOD_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/mongod'
+MONGO_DATA_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/db'
+namespace :mongo do
+  task :start do
+    sh "#{MONGOD_LOCATION} --dbpath #{MONGO_DATA_LOCATION}"
+  end
+end
