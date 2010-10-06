@@ -25,6 +25,7 @@ class TournamentsController < ApplicationController
   # GET /tournaments/new.xml
   def new
     @tournament = Tournament.new
+    @tournament.populate_seeds
 
     respond_to do |format|
       format.html # new.html.erb
