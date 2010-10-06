@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div>Name: <%= @tournament.name %></div>
+<div>Start Time: <%= @tournament.start_time %></div>
+
+<% @tournament.seedings.each do |seeding| %>
+  <div><%= "#{seeding.team}, #{seeding.seed}, #{seeding.region}" %></div>
+<% end %>
 
 <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
 <%= link_to 'Back', tournaments_path %>
