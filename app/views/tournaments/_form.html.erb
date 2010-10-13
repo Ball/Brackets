@@ -15,11 +15,21 @@
   <div>Name: <%= f.text_field :name %></div>
   <div>Start Time: <%= f.text_field :start_time %></div>
 
+  <table>
+	  <tr>
+		  <th>Seed</th>
+		  <th>Team</th>
+		  <th>Region</th>
+	  </tr>
   <%= f.fields_for :seedings do |builder| %>
-    <div>Team: <%= builder.text_field :team %></div>
-    <div>Seed: <%= builder.text_field :seed %></div>
-    <div>Region: <%= builder.text_field :region %></div>
+	  <tr>
+		  <td><%= builder.object.seed %></td>
+		  <td><%= builder.text_field :team %></td>
+		  <td><%= builder.object.region %></td>
+		  <td></td>
+	  </tr>
   <% end %>
+  </table>
 
 
   <div class="actions">
