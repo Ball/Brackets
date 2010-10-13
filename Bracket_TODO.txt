@@ -4,6 +4,7 @@ get cucumber up and going, start driving with cucumber
 *  pre-populate regions
 start pool creation
 login stuff (soonish)
+  - devise + engage (rpx) with devise
 
 ---------------------
 New Tournament
