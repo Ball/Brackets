@@ -6,8 +6,13 @@ require 'rake'
 
 Brackets::Application.load_tasks
 
-MONGOD_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/mongod'
-MONGO_DATA_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/db'
+if ENV['COMPUTERNAME'] == 'WALLACE'
+  MONGOD_LOCATION = 'C:\Users\bjball\Documents\Libraries\mongodb-win32-x86_64-1.6.2\bin\mongod.exe'
+  MONGO_DATA_LOCATION = 'C:\Users\bjball\Documents\Libraries\mongodb-win32-x86_64-1.6.2\bin\test'  
+else
+  MONGOD_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/mongod'
+  MONGO_DATA_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/db'
+end
 namespace :mongo do
   task :start do
     sh "#{MONGOD_LOCATION} --dbpath #{MONGO_DATA_LOCATION}"

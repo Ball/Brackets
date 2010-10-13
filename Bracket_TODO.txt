@@ -1,7 +1,7 @@
 get cucumber up and going, start driving with cucumber
-backport rspec for populating seeds/fix seeding
-  pre-populate seeds
-  pre-populate regions
+*backport rspec for populating seeds/fix seeding
+*  pre-populate seeds
+*  pre-populate regions
 start pool creation
 login stuff (soonish)
 

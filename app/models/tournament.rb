@@ -8,8 +8,13 @@ class Tournament
   accepts_nested_attributes_for :seedings
 
   def populate_seeds
-    (1...4).collect do |seed|
-      self.seedings << Seeding.new
+    ["Midwest", "East", "West", "South"].each do |region|
+      (1..17).collect do |seed|
+        seeding = Seeding.new
+	seeding.region = region
+	seeding.seed = seed
+        self.seedings << seeding
+      end
     end
   end
 end
