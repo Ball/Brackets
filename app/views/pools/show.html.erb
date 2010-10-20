@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<div>Name: <%= @pool.name %></div>
+<div>Owner: <%= @pool.owner_name %></div>
+
+<%= link_to 'Edit', edit_pool_path(@pool) %> |
+<%= link_to 'Back', pools_path %>
