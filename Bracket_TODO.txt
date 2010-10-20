@@ -3,7 +3,8 @@ get cucumber up and going, start driving with cucumber
 *  pre-populate seeds
 *  pre-populate regions
 start pool creation
-login stuff (soonish)
+* login stuff (soonish)
+Social Networking logins
   - devise + engage (rpx) with devise
 
 ---------------------
