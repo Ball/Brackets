@@ -54,6 +54,7 @@ GEM
     gherkin (2.2.8-x86-mingw32)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
+    haml (3.0.22)
     i18n (0.4.1)
     json (1.4.6)
     json (1.4.6-x86-mingw32)
@@ -122,6 +123,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   devise
+  haml
   mongoid (= 2.0.0.beta.17)
   rails (= 3.0.0)
   rspec
