@@ -5,6 +5,7 @@ describe "pools/edit.html.erb" do
     @pool = assign(:pool, stub_model(Pool,
       :new_record? => false
     ))
+    @tournaments = []
   end
 
   it "renders the edit pool form" do

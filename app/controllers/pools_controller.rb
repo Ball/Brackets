@@ -36,6 +36,7 @@ class PoolsController < ApplicationController
   # GET /pools/1/edit
   def edit
     @pool = Pool.find(params[:id])
+    @tournaments = Tournament.all.collect{|t| [t.name, t._id] }
   end
 
   # POST /pools

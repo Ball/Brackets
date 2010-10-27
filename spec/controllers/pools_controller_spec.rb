@@ -27,6 +27,7 @@ describe PoolsController do
       Pool.stub(:new) { mock_pool }
       get :new
       assigns(:pool).should be(mock_pool)
+      assigns(:tournaments).should_not be_nil
     end
   end
 
@@ -35,6 +36,7 @@ describe PoolsController do
       Pool.stub(:find).with("37") { mock_pool }
       get :edit, :id => "37"
       assigns(:pool).should be(mock_pool)
+      assigns(:tournaments).should_not be_nil
     end
   end
 

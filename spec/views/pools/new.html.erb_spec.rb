@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "pools/new.html.erb" do
   before(:each) do
     assign(:pool, stub_model(Pool).as_new_record)
+    assign(:tournaments, [])
   end
 
   it "renders new pool form" do
