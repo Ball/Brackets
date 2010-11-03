@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@bracket, :url => pool_brackets_path(@pool)) do |f| %>
+  <div>Name: <%= f.text_field :name %></div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+
+

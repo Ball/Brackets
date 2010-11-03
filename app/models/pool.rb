@@ -3,8 +3,8 @@ class Pool
   field :name, :type => String
   field :owner, :type => String
   field :tournament_id
-  #  TODO : Embeds many Brackets
-  #
+  embeds_many :brackets
+
   def owner_name
      if(owner.nil?)
 	     "coward"

@@ -15,7 +15,10 @@ Brackets::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :tournaments
-  resources :pools
+
+  resources :pools do
+    resources :brackets
+  end
 
   # Sample resource route with options:
   #   resources :products do

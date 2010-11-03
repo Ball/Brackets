@@ -3,5 +3,18 @@
 <div>Name: <%= @pool.name %></div>
 <div>Owner: <%= @pool.owner_name %></div>
 
+<div>
+  <div><%= link_to 'Join this pool', new_pool_bracket_path(@pool) %></div>
+</div>
+
+<table>
+  <% @pool.brackets.each do |b| %>
+  <tr>
+    <td><%= b.owner %></td>
+    <td><%= b.name %></td>
+  </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Edit', edit_pool_path(@pool) %> |
 <%= link_to 'Back', pools_path %>
