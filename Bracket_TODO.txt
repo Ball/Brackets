@@ -2,7 +2,14 @@ get cucumber up and going, start driving with cucumber
 *backport rspec for populating seeds/fix seeding
 *  pre-populate seeds
 *  pre-populate regions
+
+***** START HERE ********
 start pool creation
+ *bracket populates picks
+ Bracket builds with tournament seeds
+ bracket new controller introduces bracket and tournament seeds
+
+
 * login stuff (soonish)
 Social Networking logins
   - devise + engage (rpx) with devise
