@@ -1,0 +1,37 @@
+<%= form_for(@pick) do |f| %>
+  <% if @pick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
+
+      <ul>
+      <% @pick.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team1 %><br />
+    <%= f.text_field :team1 %>
+  </div>
+  <div class="field">
+    <%= f.label :team2 %><br />
+    <%= f.text_field :team2 %>
+  </div>
+  <div class="field">
+    <%= f.label :winner %><br />
+    <%= f.text_field :winner %>
+  </div>
+  <div class="field">
+    <%= f.label :round %><br />
+    <%= f.text_field :round %>
+  </div>
+  <div class="field">
+    <%= f.label :game_number %><br />
+    <%= f.text_field :game_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

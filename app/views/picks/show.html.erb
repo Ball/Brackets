@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team1:</b>
+  <%= @pick.team1 %>
+</p>
+
+<p>
+  <b>Team2:</b>
+  <%= @pick.team2 %>
+</p>
+
+<p>
+  <b>Winner:</b>
+  <%= @pick.winner %>
+</p>
+
+<p>
+  <b>Round:</b>
+  <%= @pick.round %>
+</p>
+
+<p>
+  <b>Game number:</b>
+  <%= @pick.game_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_pick_path(@pick) %> |
+<%= link_to 'Back', picks_path %>

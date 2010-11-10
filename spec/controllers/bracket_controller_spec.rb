@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe BracketController do
+describe BracketsController do
 
 end
