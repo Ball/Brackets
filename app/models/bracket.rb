@@ -24,10 +24,48 @@ class Bracket
     build_picks(1, 6)
     self
   end
+
+  def populate_teams(tournament)
+    teams_by_region = tournament.seedings.inject({}) do |hash, seeding|
+      hash[seeding.region] ||= []
+      hash[seeding.region] << seeding
+      hash
+    end
+    teams_by_region.each_pair do |region, seedings|
+      seedings.sort!{|a, b| a.seed <=> b.seed}
+    end
+
+    teams_by_region.values.each_with_index do |seedings, j|
+      teams = seedings.select {|s| s.seed > 15}.collect{|s| s.team}.sort
+
+      round_zero[j].team1 = teams[0]
+      round_zero[j].team2 = teams[1]
+    end
+
+    #teams_by_region.values_at(teams_by_region.keys.sort).each_with_index do |seedings, j|
+    teams_by_region.values_at("Midwest", "East", "West", "South").each_with_index do |seedings, j|
+      team = seedings.select{|s| s.seed == 1}.first.team
+      
+      round_one[j*8].team1 = team
+    end
+  end
+
+  def round_zero
+    picks_for_round(0)
+  end
+
+  def round_one
+    picks_for_round(1)
+  end
+
   private
   def build_picks(number, round)
 	  (1..number).each do |n|
 	    self.picks << Pick.new().tap{|i| i.round = round; i.game_number = n}
 	  end
+  end
+
+  def picks_for_round(round_number)
+    picks.select{|p| p.round == round_number}
   end
 end
