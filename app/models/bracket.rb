@@ -42,6 +42,15 @@ class Bracket
       round_zero[j].team2 = teams[1]
     end
 
+    teams_by_region.values.each_with_index do |seedings, j|
+      magic = j * 8 
+      (0...(seedings.size / 2)).each do | i |
+	puts "Team 1 #{seedings[i].team} vs Team 2 #{seedings[15-i].team} at game #{i + magic}"
+	round_one[i + magic].team1 = seedings[i].team
+        round_one[i + magic].team2 = seedings[15-i].team unless i == 0
+      end
+    end
+
     #teams_by_region.values_at(teams_by_region.keys.sort).each_with_index do |seedings, j|
     teams_by_region.values_at("Midwest", "East", "West", "South").each_with_index do |seedings, j|
       team = seedings.select{|s| s.seed == 1}.first.team
