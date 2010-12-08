@@ -4,6 +4,7 @@ get cucumber up and going, start driving with cucumber
 *  pre-populate regions
 
 ***** START HERE ********
+order regions!
 start pool creation
  *bracket populates picks
  Bracket builds with tournament seeds
