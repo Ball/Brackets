@@ -21,7 +21,7 @@ describe "picks/index.html.erb" do
   end
 
   it "renders a list of picks" do
-    pending "Look at views later"
+    pending "Broken: Look at views later"
     render
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Team1".to_s, :count => 2
