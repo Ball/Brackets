@@ -6,7 +6,7 @@ get cucumber up and going, start driving with cucumber
 ***** START HERE ********
 start pool creation
  *bracket populates picks
- Bracket builds with tournament seeds
+ *Bracket builds with tournament seeds
  bracket new controller introduces bracket and tournament seeds
 
 
