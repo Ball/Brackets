@@ -6,9 +6,11 @@ class Tournament
   embeds_one :opening_round, :class_name => "Game"
 
   accepts_nested_attributes_for :seedings
-
+  def regions
+    ["Midwest", "West", "East", "South"]
+  end
   def populate_seeds
-    ["Midwest", "East", "West", "South"].each do |region|
+    regions.each do |region|
       (1..17).collect do |seed|
         seeding = Seeding.new
 	seeding.region = region

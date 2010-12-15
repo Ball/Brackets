@@ -17,6 +17,7 @@ class BracketsController < ApplicationController
   # GET /brackets/1.xml
   def show
     @bracket = @pool.brackets.Pool.find(params[:id])
+    
 
     respond_to do |format|
       format.html # show.html.erb
