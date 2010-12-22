@@ -29,7 +29,10 @@ class BracketsController < ApplicationController
   # GET /brackets/new.xml
   def new
     @pool = Pool.find(params[:pool_id])
-    @bracket = Bracket.new
+
+    @bracket = Bracket.build
+
+    @bracket.populate_teams(Tournament.find(@pool.tournament_id))
 
     respond_to do |format|
       format.html # new.html.erb

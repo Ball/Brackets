@@ -8,6 +8,7 @@ start pool creation
  *bracket populates picks
  *Bracket builds with tournament seeds
  bracket new controller introduces bracket and tournament seeds
+ tournament controller needs to create a tournament model correctly in 'create' based on params from 
 
 
 * login stuff (soonish)
