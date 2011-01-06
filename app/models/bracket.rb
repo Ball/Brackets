@@ -61,7 +61,7 @@ class Bracket
       starting_position_lookup = [0, 7, 5, 3, 2, 4, 6, 1]
       region_offset = j*8
       (0...(seedings.size / 2)).each do | i |
-	round_one[region_offset + starting_position_lookup[i]].team1 = seedings[i].team
+        round_one[region_offset + starting_position_lookup[i]].team1 = seedings[i].team
         round_one[region_offset + starting_position_lookup[i]].team2 = seedings[15-i].team unless i == 0
       end
     end

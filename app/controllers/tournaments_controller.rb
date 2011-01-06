@@ -41,7 +41,17 @@ class TournamentsController < ApplicationController
   # POST /tournaments
   # POST /tournaments.xml
   def create
+    seedings = params[:tournament].delete(:seedings_attributes)
     @tournament = Tournament.new(params[:tournament])
+    
+    seedings.each_value do |seed_attributes|
+      seed = Seeding.new
+      seed.team = seed_attributes[:team]
+      seed.region = seed_attributes[:region]
+      seed.seed = seed_attributes[:seed]
+
+      @tournament.seedings << seed
+    end
 
     respond_to do |format|
       if @tournament.save
