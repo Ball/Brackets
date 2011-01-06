@@ -9,6 +9,9 @@ Brackets::Application.load_tasks
 if ENV['COMPUTERNAME'] == 'WALLACE'
   MONGOD_LOCATION = 'C:\Users\bjball\Documents\Libraries\mongodb-win32-x86_64-1.6.2\bin\mongod.exe'
   MONGO_DATA_LOCATION = 'C:\Users\bjball\Documents\Libraries\mongodb-win32-x86_64-1.6.2\bin\test'  
+elsif ENV['COMPUTERNAME'] == 'COLOSSUS'
+  MONGOD_LOCATION = 'C:\mongo\bin\mongod'
+  MONGO_DATA_LOCATION = 'C:\mongo\bracketdata'
 else
   MONGOD_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/mongod'
   MONGO_DATA_LOCATION = '~/Downloads/mongodb-osx-i386-1.6.2/bin/db'

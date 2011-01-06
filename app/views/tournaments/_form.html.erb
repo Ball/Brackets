@@ -27,6 +27,8 @@
 		  <td><%= builder.text_field :team %></td>
 		  <td><%= builder.object.region %></td>
 		  <td></td>
+		  <%= builder.hidden_field :region %>
+		  <%= builder.hidden_field :seed %>
 	  </tr>
   <% end %>
   </table>
