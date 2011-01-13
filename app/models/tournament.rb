@@ -9,6 +9,11 @@ class Tournament
   def regions
     ["Midwest", "West", "East", "South"]
   end
+
+  def seeding_for_team(name)
+    seedings.select{|s| s.team == name}.first
+  end
+
   def populate_seeds
     regions.each do |region|
       (1..17).collect do |seed|

@@ -6,4 +6,14 @@ class Pick
   field :round, :type => Integer
   field :game_number, :type => Integer
   embedded_in :bracket, :inverse_of => :picks
+
+  def seeding1
+    seed = bracket.pool.tournament.seeding_for_team(team1)
+    seed.nil? ? "" : seed.seed
+  end
+
+  def seeding2
+    seed = bracket.pool.tournament.seeding_for_team(team2)
+    seed.nil? ? "" : seed.seed
+  end
 end

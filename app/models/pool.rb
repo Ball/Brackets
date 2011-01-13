@@ -5,6 +5,10 @@ class Pool
   field :tournament_id
   embeds_many :brackets
 
+  def tournament
+    @tournament ||= Tournament.find(tournament_id)
+  end
+
   def owner_name
      if(owner.nil?)
 	     "coward"

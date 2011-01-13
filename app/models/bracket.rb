@@ -8,8 +8,9 @@ class Bracket
 
   embedded_in :pool, :inverse_of => :brackets
 
-  def self.build()
+  def self.build(pool)
     temp = Bracket.new()
+    temp.pool = pool
     temp.populate_picks
     temp
   end

@@ -1,9 +1,29 @@
 <p id="notice"><%= notice %></p>
 <% @bracket.round_zero.each do |p| %>
-  <div id="game_0_<%= p.game_number%>"><%= p.team1.name %> vs. <%= p.team2.name%></div>
+  <div id="round_0_game_<%= p.game_number%>">
+    <div>
+      <div><%= p.seeding1 %></div>
+      <div><%= p.team1 %></div>
+    </div>
+    <div>
+      <div><%= p.seeding2 %></div>
+      <div><%= p.team2 %></div>
+    </div>
+    </div>
+  </div>
 <% end %>
 <% @bracket.round_one.each do |p| %>
-  <div id="game_1_<%= p.game_number%>"><%= p.team1.name %> vs. <%= p.team2.name%></div>
+  <div id="round_1_game_<%= p.game_number%>">
+    <div>
+      <div><%= p.seeding1 %></div>
+      <div><%= p.team1 %></div>
+    </div>
+    <div>
+      <div><%= p.seeding2 %></div>
+      <div><%= p.team2 %></div>
+    </div>
+    </div>
+  </div>
 <% end %>
 <%= form_for(@bracket, :url => pool_brackets_path(@pool)) do |f| %>
   <div>Name: <%= f.text_field :name %></div>

@@ -30,7 +30,7 @@ class BracketsController < ApplicationController
   def new
     @pool = Pool.find(params[:pool_id])
 
-    @bracket = Bracket.build
+    @bracket = Bracket.build(@pool)
 
     @bracket.populate_teams(Tournament.find(@pool.tournament_id))
 
