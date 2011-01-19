@@ -1,30 +1,12 @@
 <p id="notice"><%= notice %></p>
 <% @bracket.round_zero.each do |p| %>
-  <div id="round_0_game_<%= p.game_number%>">
-    <div>
-      <div><%= p.seeding1 %></div>
-      <div><%= p.team1 %></div>
-    </div>
-    <div>
-      <div><%= p.seeding2 %></div>
-      <div><%= p.team2 %></div>
-    </div>
-    </div>
-  </div>
+  <%= render :partial => "game", :locals => {:p => p, :idtext => "round_0_game_#{p.game_number}", :side => zero_side(p)} %>
 <% end %>
+
 <% @bracket.round_one.each do |p| %>
-  <div id="round_1_game_<%= p.game_number%>">
-    <div>
-      <div><%= p.seeding1 %></div>
-      <div><%= p.team1 %></div>
-    </div>
-    <div>
-      <div><%= p.seeding2 %></div>
-      <div><%= p.team2 %></div>
-    </div>
-    </div>
-  </div>
+  <%= render :partial => "game", :locals => {:p => p, :idtext => "round_1_game_#{p.game_number}", :side => one_side(p)} %>
 <% end %>
+
 <%= form_for(@bracket, :url => pool_brackets_path(@pool)) do |f| %>
   <div>Name: <%= f.text_field :name %></div>
   <div class="actions"><%= f.submit %></div>
