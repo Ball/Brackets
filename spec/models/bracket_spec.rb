@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe Bracket do
   context "New bracket creation" do
-    before(:each) { @bracket = Bracket.build }
+    before(:each) { @bracket = Bracket.build(Pool.new) }
     it "should create with 67 picks" do
     	  @bracket.picks.size.should == 67
     end
@@ -34,7 +34,8 @@ describe Bracket do
       tournament.populate_seeds
       tournament.seedings.each_with_index{|seeding, i| seeding.team = "Team #{i+1}"}
 
-      @bracket = Bracket.build
+      @pool = Pool.new
+      @bracket = Bracket.build(@pool)
       @bracket.populate_teams(tournament)
     end
 
