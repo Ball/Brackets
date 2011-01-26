@@ -38,4 +38,6 @@ gem 'haml'
    gem 'rspec-rails'
    gem 'cucumber'
    gem 'cucumber-rails'
+   gem 'autorefresh'
+   gem 'watchr'
  end
