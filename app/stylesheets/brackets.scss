@@ -1,0 +1,58 @@
+$region_gap: 40;
+$game_height: 20;
+
+@for $i from 1 through 8 {
+  #round_1_game_#{$i} {
+    position: absolute;
+    top: $game_height*$i;
+    left: 0;
+  }
+}
+
+@for $i from 9 through 16 {
+  #round_1_game_#{$i} {
+    position: absolute;
+    top: ($game_height*$i) +$region_gap;
+    left: 0;
+  }
+}
+
+.seeding {
+  float:left;
+  background: dimgray;
+  width: 4em;
+}
+.teamName {
+  background: gainsboro;
+  display:block;
+  width: 100%
+}
+.game {
+  clear:both;
+  border-color: black;
+  border-size: 1;
+  border-style: solid;
+  width: 350px;
+}
+//.zero_left{
+//  float:left;
+//  margin-right: 0px;
+//  border-style:solid;
+//  border-color:red;
+//  border-width:1px;
+//}
+//.one_left {
+//  float:left;
+//  border-color: green;
+//}
+//.one_right {
+//  float:right;
+//  border-color: blue;
+//}
+//.zero_right{
+//  float:right;
+//  margin-right: 0px;
+//  border-style:solid;
+//  border-color:orange;
+//  border-width:1px;
+//}

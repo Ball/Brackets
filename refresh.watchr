@@ -5,5 +5,5 @@ def refresh(filename)
   system("autorefresh #{app}")
 end
 
-watch ('public/stylesheets/.*css') {|m| refresh(m)}
+watch ('app/stylesheets/.*\.scss') {|m| refresh(m)}
 watch ('app/views/.*\.haml') {|m| refresh(m)}
